@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Internship {
+    String title;
+    String company;
+    String location;
+    String stipend;
+    String applyLink;
+
+    Internship(String title, String company, String location, String stipend, String applyLink) {
+        this.title = title;
+        this.company = company;
+        this.location = location;
+        this.stipend = stipend;
+        this.applyLink = applyLink;
+    }
+
+    void display() {
+        System.out.println("Title    : " + title);
+        System.out.println("Company  : " + company);
+        System.out.println("Location : " + location);
+        System.out.println("Stipend  : " + stipend);
+        System.out.println("Apply    : " + applyLink);
+        System.out.println("-----------------------------------");
+    }
+}
+
+public class InternshipAggregator {
+
+    public static void main(String[] args) {
+
+        ArrayList<Internship> internships = new ArrayList<>();
+
+        // Adding Internship Data
+        internships.add(new Internship(
+                "Python Developer Intern",
+                "ABC Tech",
+                "Hyderabad",
+                "₹8000/month",
+                "https://example.com/apply1"));
+
+        internships.add(new Internship(
+                "Data Science Intern",
+                "XYZ Solutions",
+                "Remote",
+                "₹10000/month",
+                "https://example.com/apply2"));
+
+        internships.add(new Internship(
+                "Web Development Intern",
+                "TechSoft",
+                "Bangalore",
+                "₹7000/month",
+                "https://example.com/apply3"));
+
+        System.out.println("===== Internship Opportunity Aggregator =====\n");
+
+        // Display All Internships
+        for (Internship i : internships) {
+            i.display();
+        }
+    }
+}
